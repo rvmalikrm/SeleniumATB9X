@@ -9,6 +9,9 @@ public class TestSelenium01 {
     public void test_Selenium01(){
         WebDriver driver=new EdgeDriver();
         driver.get("https://www.google.com");
+        String str =driver.getTitle();
+        System.out.println(str);
+
 
     }
 
