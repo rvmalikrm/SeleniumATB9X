@@ -10,5 +10,6 @@ public class TestSelenium02 {
     public void test_Selenium02(){
     WebDriver driver=new ChromeDriver();
     driver.navigate().to("https://www.google.com");
+    System.out.println(driver.getTitle());
     }
 }
