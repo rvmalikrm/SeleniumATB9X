@@ -13,7 +13,7 @@ public class TestSelenium17 {
 
     @Description("Verify that with invalid email, pass , error message is showing ")
     @Test
-    public void test_negative_vwo_login() throws Exception {
+    public void test_negative_vwo_login() throws Exception,AssertionError {
 
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.addArguments("==stage-maximized==");
@@ -34,7 +34,17 @@ public class TestSelenium17 {
         WebElement submit = driver.findElement(By.id("js-login-btn"));
         submit.click();
         // 4. find the error message and Verify the error massage
-        //Assert("")
+        //<div
+        // class="notification-box-description"
+        // id="js-notification-box-msg"
+        // data-qa="rixawilomi">
+        // Your email, password, IP address or location did not match
+        // </div>
+        Thread.sleep(100);
+        WebElement error_msg=driver.findElement(By.id("js-notification-box-msg"));
+        System.out.println("Actual error message: " +error_msg.getText());
+        Assert.assertEquals(error_msg.getText(),"Your email, password, IP address or location did not match" );
+
 
     }
 
