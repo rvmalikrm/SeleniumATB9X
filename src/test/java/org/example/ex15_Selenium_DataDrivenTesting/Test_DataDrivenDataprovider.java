@@ -9,7 +9,8 @@ public class Test_DataDrivenDataprovider {
     public Object[][] getData(){
         return new Object[][]{
                 new Object[]{"admin@gmail.com", "pass123"},
-                new Object[] {"admi234n@gmail.com", "pass123"}
+                new Object[] {"admi234n@gmail.com", "pass123"},
+                new Object[] {"admin4390@gmail.com", "admin@123"}
         };
     }
 
