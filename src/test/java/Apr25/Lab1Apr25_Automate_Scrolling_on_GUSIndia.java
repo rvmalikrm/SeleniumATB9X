@@ -14,9 +14,11 @@ public class Lab1Apr25_Automate_Scrolling_on_GUSIndia {
         WebElement footer=driver.findElement(By.xpath("//a[normalize-space(text())='Terms Conditions']"));
         JavascriptExecutor js= (JavascriptExecutor) driver;
         System.out.println(footer);
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight/2)");
-        Thread.sleep(500);
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
-//        js.executeScript("argument[0].scrollIntoView(true);",footer);
+//        Method 1 using window.scrollTo(0,document,body.scrollHeight
+//        js.executeScript("window.scrollTo(0,document.body.scrollHeight/2)");
+//        Thread.sleep(500);
+//        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+//        Methos 2 using arguments[0].scrollIntoView(true);", WebElement
+        js.executeScript("arguments[0].scrollIntoView(true);",footer);
 }
     }
