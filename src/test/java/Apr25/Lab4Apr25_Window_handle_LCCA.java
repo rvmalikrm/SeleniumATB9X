@@ -19,8 +19,7 @@ public class Lab4Apr25_Window_handle_LCCA {
         String url = link.getAttribute("href");
         System.out.println(url);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("window.open('"+url+"','_blank')");
-        js.executeScript("window.open('url', '_blank')");
+        js.executeScript("window.open('"+url+"','_blank')");
         System.out.println(url);
         Set<String> allwindows = driver.getWindowHandles();
         Thread.sleep(2000);
