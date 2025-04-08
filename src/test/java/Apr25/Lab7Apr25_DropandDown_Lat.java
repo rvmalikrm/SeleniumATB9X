@@ -14,7 +14,8 @@ public class Lab7Apr25_DropandDown_Lat {
         System.out.println(Tittle);
         WebElement ele=driver.findElement(By.cssSelector("form div div button[type='submit']"));
         JavascriptExecutor js=(JavascriptExecutor)driver;
-        js.executeScript("arguments[0].scrollintoView(true);",ele);
+        js.executeScript("arguments[0].scrollIntoView(true);",ele);
+
 
     }
 }
