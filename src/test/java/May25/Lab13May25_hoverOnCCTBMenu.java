@@ -26,7 +26,6 @@ public class Lab13May25_hoverOnCCTBMenu
         Actions action = new Actions(driver);
         action.moveToElement(ele1).build().perform();
         JavascriptExecutor js = (JavascriptExecutor)driver;
-
         js.executeScript("arguments[0].style.border='3px solid red'",ele1);
         Thread.sleep(3000);
     }
