@@ -16,6 +16,8 @@ public class Lab12May25_Scroll_Fleming {
         JavascriptExecutor js= (JavascriptExecutor) driver;
         //js.executeScript("arguments[0].scrollIntoView(true);",ele1);
         js.executeScript("window.scrollTo(0, 1000);");
+        js.executeScript("window.scrollTo(0, 2000);");
+        js.executeScript("window.scrollTo(0, 3000);");
 
         }
     }
