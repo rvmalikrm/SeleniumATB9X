@@ -28,11 +28,14 @@ public class Lab13May25_window_handle_CCTB
         ArrayList<String> ar =new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(ar.get(1));
         System.out.println(driver.getTitle());
-        driver.close();
-    }
-    public void teardown(){
-       if(driver!=null)
         driver.switchTo().defaultContent();
         driver.close();
+
+    }
+    @AfterMethod
+    public void teardown(){
+       if(driver!=null)
+
+        driver.quit();
     }
 }
