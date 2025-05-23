@@ -29,9 +29,12 @@ public class Lab15May25_searchFleming {
         WebElement searcbutton = driver.findElement(By.xpath("//span[normalize-space(text())='Search']"));
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
         js2.executeScript("arguments[0].click();", searcbutton);
-        WebElement footer=driver.findElement(By.cssSelector("a[title*='Lifestyle ']"));
+        WebElement footer = driver.findElement(By.cssSelector("a[title*='Lifestyle ']"));
         JavascriptExecutor js3 = (JavascriptExecutor) driver;
-        js3.executeScript("arguments[0].scrollIntoView(true);",footer);
+        js3.executeScript("arguments[0].scrollIntoView(true);", footer);
+
+
+
         String currentwindow= driver.getWindowHandle();
         WebElement link= driver.findElement(By.linkText("Read"));
         //link.click();
