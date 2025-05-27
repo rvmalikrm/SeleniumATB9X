@@ -33,7 +33,8 @@ public class Lab22May25_iFrame_DemoQA {
         String headingText = editor.getText();
         System.out.println("Heading text inside iframe: " + headingText);
         JavascriptExecutor js= (JavascriptExecutor) driver;
-        js.executeScript("document.getElementById('sampleHeading').innerText = 'Changed by Selenium';");
+        //js.executeScript("document.getElementById('sampleHeading').innerText = 'Changed by Selenium';");
+        js.executeScript("arguments[0].innerText='Entered by Selenium';", editor);
     }
     @AfterTest
     public void tearDown(){
