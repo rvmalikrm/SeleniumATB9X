@@ -11,7 +11,7 @@ import java.util.List;
 public class Lab24Sept25_UNFCDropDownList {
     public static void main(String[] args) {
         WebDriver driver=new ChromeDriver();
-        driver.get("https://refundsweb-stage.azurewebsites.net/");
+        driver.get("https://inquiries.unfc.ca/");
         driver.manage().window().maximize();
         WebElement ele1=driver.findElement(By.xpath("//select[@id='requestType']"));
         //List<WebElement> ele1=driver.findElements(By.tagName("options"));
